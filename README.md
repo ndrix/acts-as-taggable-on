@@ -103,7 +103,7 @@ Setup
 
 ```ruby
 class User < ActiveRecord::Base
-  acts_as_taggable # Alias for acts_as_taggable_on :tags
+  acts_as_taggable_on :tags
   acts_as_taggable_on :skills, :interests
 end
 
@@ -193,8 +193,7 @@ To preserve the order in which tags are created use `acts_as_ordered_taggable`:
 
 ```ruby
 class User < ActiveRecord::Base
-  # Alias for acts_as_ordered_taggable_on :tags
-  acts_as_ordered_taggable
+  acts_as_ordered_taggable_on :tags
   acts_as_ordered_taggable_on :skills, :interests
 end
 
